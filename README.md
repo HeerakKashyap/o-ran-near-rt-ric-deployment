@@ -74,10 +74,10 @@ This repository contains the complete implementation and documentation for deplo
 ## Deployment Status
 
 ### Successfully Deployed Components
--  **E2SIM Container**: Running with detailed logging
--  **Infrastructure**: Kong, Tiller, namespaces
--  **HelloWorld xApp**: HTTP 200 OK response
--  **E2Mgr Services**: Deployed (pod has image issues)
+- **E2SIM Container**: Running with detailed logging
+- **Infrastructure**: Kong, Tiller, namespaces
+- **HelloWorld xApp**: HTTP 200 OK response
+- **E2Mgr Services**: Deployed (pod has image issues)
 
 ### Known Issues
 - **E2Mgr Pod**: ImagePullBackOff due to registry access
@@ -234,21 +234,12 @@ taskkill /PID <PID> /F
 # Reset Kubernetes cluster if needed
 ```
 
-## Repository Statistics
+## Documentation Files
 
-- **Total Files**: 3,000+ files
-- **Repository Size**: ~3MB
-- **Languages**: Smarty (89.9%), PowerShell (10.1%)
-- **Components**: E2SIM, Near-RT RIC, xApp, Infrastructure
+- **[O-RAN-Task-Submission.md](O-RAN-Task-Submission.md)**: Main submission document with complete task overview
+- **[O-RAN-Deployment-Status.md](O-RAN-Deployment-Status.md)**: Detailed deployment status and component analysis
+- **[TEST-RESULTS-SUMMARY.md](TEST-RESULTS-SUMMARY.md)**: Comprehensive test results and verification
 
 ## License
 
-This project is provided as-is for educational and demonstration purposes.
-
-## Contact
-
-For questions or issues, please refer to the documentation files or create an issue in the repository.
-
----
-
-**Note**: This deployment demonstrates a working O-RAN ecosystem with E2SIM, Near-RT RIC infrastructure, and xApp functionality. While some components have known limitations (registry access, API compatibility), the core functionality is proven and documented. 
+This project is provided as-is for educational and demonstration purposes. 
