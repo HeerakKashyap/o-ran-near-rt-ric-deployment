@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: helloworld-xapp
+  namespace: ricxapp
+  labels:
+    app: helloworld-xapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: helloworld-xapp
+  template:
+    metadata:
+      labels:
+        app: helloworld-xapp
+    spec:
+      containers:
+      - name: helloworld-xapp
+        image: nginx:alpine
+        ports:
+        - containerPort: 80
+        env:
+        - name: MESSAGE
+          value: "Hello from O-RAN xApp!"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: helloworld-xapp-service
+  namespace: ricxapp
+spec:
+  selector:
+    app: helloworld-xapp
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+  type: ClusterIP 
