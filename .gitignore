@@ -1,8 +1,8 @@
 # Embedded git repositories
-workspace/ric-dep/
+workspace/ric-dep/.git/
 
 # Helm extracted files
-helm-extracted/
+helm-extracted/windows-amd64/helm.exe
 
 # Temporary files
 *.tmp
