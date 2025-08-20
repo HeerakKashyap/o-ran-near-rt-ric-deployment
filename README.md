@@ -241,4 +241,4 @@ taskkill /PID <PID> /F
 
 ## License
 
-This project is provided as-is for educational and demonstration purposes. 
+This project is provided as-is for educational and evaluation process
