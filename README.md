@@ -90,7 +90,6 @@ This repository contains the complete implementation and documentation for deplo
 1. **Windows 10/11** with PowerShell
 2. **Docker Desktop** with Kubernetes enabled
 3. **Git** for cloning the repository
-4. **Minimum 8GB RAM** and 50GB free space
 
 ### Step 1: Clone and Setup
 ```powershell
