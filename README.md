@@ -81,8 +81,8 @@ This repository contains the complete implementation and documentation for deplo
 - **HelloWorld xApp**: HTTP 200 OK response
 - **E2Mgr Services**: Deployed (pod has image issues)
 
-![E2SIM Container Running Successfully](screenshots/4%20-%20e2sim-container.png)
-*E2SIM container running successfully with detailed simulation logs showing E2AP protocol, KPM service model, and SCTP interface all operational*
+![E2SIM Container Running Successfully](screenshots/e2sim-docker-desktop-logs.png)
+*E2SIM container "e2sim-logging-fixed" running successfully in Docker Desktop with detailed simulation logs showing E2AP protocol, KPM service model, and SCTP interface all operational*
 
 ### Known Issues
 - **E2Mgr Pod**: ImagePullBackOff due to registry access limitations
