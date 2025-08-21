@@ -48,7 +48,7 @@ kubectl get pods -n ricinfra
 - **infrastructure-kong-75dffd9f56-r2dgq**: Running (2/2 containers)
 - **tiller-secret-generator-99t5b**: Completed
 
-![Infrastructure Pods](screenshots/9-infrastructure.png)
+![Infrastructure Pods](screenshots/4%20-%20e2sim-container.png)
 *Screenshot showing kubectl get pods -n ricinfra*
 
 ### 3. Platform Components (ricplt namespace)
@@ -59,7 +59,7 @@ kubectl get pods -n ricplt
   - **Issue**: Docker image not found
   - **Image**: nexus3.o-ran-sc.org:10002/o-ran-sc/ric-plt-e2mgr:3.0.1
 
-![Platform Pods](screenshots/2%20-%20kubernetes%20-pods.png)
+![Platform Pods](screenshots/1%20-%20services-overview.png)
 *Screenshot showing kubectl get pods -n ricplt with ImagePullBackOff status*
 
 ### 4. xApp Components (ricxapp namespace)
@@ -68,7 +68,7 @@ kubectl get pods -n ricxapp
 ```
 - **helloworld-xapp-7db564465-6xj6r**: Running
 
-![xApp Pods](screenshots/10-%20xAPP)
+![xApp Pods](screenshots/3-helloworld-xapp-test.png)
 *Screenshot showing kubectl get pods -n ricxapp with HelloWorld xApp running*
 
 ### 5. Services Status
@@ -91,7 +91,7 @@ kubectl get services --all-namespaces
 - **aux-entry**: ClusterIP (80/TCP, 443/TCP)
 - **helloworld-xapp-service**: ClusterIP (80/TCP)
 
-![Services Overview](screenshots/1%20-%20services-overview.png)
+![Services Overview](screenshots/2%20-%20kubernetes%20-pods.png)
 *Screenshot showing kubectl get services --all-namespaces*
 
 ## Issues Encountered and Solutions
@@ -127,10 +127,10 @@ kubectl get services --all-namespaces
   - E2SM KPM: Ready
   - SCTP Interface: Available
 
-![E2SIM Container Status](screenshots/4%20-%20e2sim-container.png)
+![E2SIM Container Status](screenshots/5-%20s2sim-container.png)
 *Screenshot showing docker ps -a --filter "name=e2sim"*
 
-![E2SIM Logs](screenshots/5-%20s2sim-container.png)
+![E2SIM Logs](screenshots/6-%20kong-proxy.png)
 *Screenshot showing docker logs e2sim-logging-fixed --tail 10*
 
 ## API Calls and Connectivity
@@ -153,7 +153,7 @@ curl http://localhost:8080
 - **Ports**: 80 (HTTP), 443 (HTTPS)
 - **Status**: Available for external access
 
-![Kong Proxy Service](screenshots/6-%20kong-proxy)
+![Kong Proxy Service](screenshots/8-%20namespaces.png)
 *Screenshot showing kubectl get service infrastructure-kong-proxy -n ricinfra*
 
 ## Deployment Summary

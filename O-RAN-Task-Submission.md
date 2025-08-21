@@ -30,7 +30,7 @@
 kubectl get pods --all-namespaces -o wide
 ```
 
-![Kubernetes Pods Status](screenshots/2%20-%20kubernetes%20-pods.png)
+![Kubernetes Pods Status](screenshots/1%20-%20services-overview.png)
 *Screenshot showing all pods across namespaces including ricinfra, ricplt, and ricxapp*
 
 ### 2. Services Status
@@ -38,7 +38,7 @@ kubectl get pods --all-namespaces -o wide
 kubectl get services --all-namespaces
 ```
 
-![Kubernetes Services Overview](screenshots/1%20-%20services-overview.png)
+![Kubernetes Services Overview](screenshots/2%20-%20kubernetes%20-pods.png)
 *Screenshot showing all services including Kong proxy, E2Mgr services, and HelloWorld xApp service*
 
 ### 3. E2 Simulator Status
@@ -46,7 +46,7 @@ kubectl get services --all-namespaces
 docker ps -a | grep e2sim
 ```
 
-![E2SIM Container Status](screenshots/4%20-%20e2sim-container.png)
+![E2SIM Container Status](screenshots/5-%20s2sim-container.png)
 *Screenshot showing E2SIM container running status*
 
 **E2SIM Logs:**
@@ -54,7 +54,7 @@ docker ps -a | grep e2sim
 docker logs e2sim-logging-fixed --tail 10
 ```
 
-![E2SIM Logs](screenshots/5-%20s2sim-container.png)
+![E2SIM Logs](screenshots/6-%20kong-proxy.png)
 *Screenshot showing E2SIM simulation logs with KPM and E2AP protocol messages*
 
 ## Issues Encountered and Solutions
@@ -106,7 +106,7 @@ curl http://localhost:8080
 - **Ports**: 80 (HTTP), 443 (HTTPS)
 - **Status**: Available for external access
 
-![Kong Proxy Service](screenshots/6-%20kong-proxy)
+![Kong Proxy Service](screenshots/8-%20namespaces.png)
 *Screenshot showing Kong proxy service with external IP and ports*
 
 ### 3. E2Mgr Services

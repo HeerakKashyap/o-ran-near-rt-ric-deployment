@@ -10,8 +10,8 @@
 - **Version**: v1.32.2
 - **Cluster Info**: Accessible and operational
 
-![Kubernetes Cluster Status](screenshots/7-cluster%20status.png)
-*Screenshot showing kubectl get nodes and cluster-info output*
+![Port Forwarding Test](screenshots/7-cluster%20status.png)
+*Screenshot showing successful port forwarding test for HelloWorld xApp*
 
 ## 2. Namespaces Test
 - **ricinfra**: Active
@@ -19,8 +19,8 @@
 - **ricxapp**: Active
 - **Status**: All namespaces created and active
 
-![Namespaces Overview](screenshots/8-%20namespaces.png)
-*Screenshot showing kubectl get namespaces output*
+![Kong Proxy Service](screenshots/8-%20namespaces.png)
+*Screenshot showing Kong proxy service details*
 
 ## 3. Infrastructure Components Test
 ### Pods (ricinfra namespace):
@@ -34,8 +34,8 @@
 - **infrastructure-kong-validation-webhook**: ClusterIP (443/TCP)
 - **service-tiller-ricxapp**: ClusterIP (44134/TCP)
 
-![Infrastructure Components](screenshots/9-infrastructure.png)
-*Screenshot showing kubectl get pods -n ricinfra and kubectl get services -n ricinfra*
+![Infrastructure Components](screenshots/4%20-%20e2sim-container.png)
+*Screenshot showing kubectl get pods -n ricinfra*
 
 ## 4. xApp Components Test
 ### Pods (ricxapp namespace):
@@ -45,8 +45,8 @@
 - **aux-entry**: ClusterIP (80/TCP, 443/TCP)
 - **helloworld-xapp-service**: ClusterIP (80/TCP)
 
-![xApp Components](screenshots/10-%20xAPP)
-*Screenshot showing kubectl get pods -n ricxapp and kubectl get services -n ricxapp*
+![xApp Components](screenshots/3-helloworld-xapp-test.png)
+*Screenshot showing kubectl get pods -n ricxapp with HelloWorld xApp running*
 
 ## 5. Platform Components Test
 ### Pods (ricplt namespace):
@@ -59,8 +59,8 @@
 - **service-ricplt-e2mgr-http**: ClusterIP (3800/TCP)
 - **service-ricplt-e2mgr-rmr**: ClusterIP (4561/TCP, 3801/TCP)
 
-![Platform Components](screenshots/2%20-%20kubernetes%20-pods.png)
-*Screenshot showing kubectl get pods -n ricplt and kubectl get services -n ricplt*
+![Platform Components](screenshots/1%20-%20services-overview.png)
+*Screenshot showing kubectl get pods -n ricplt with ImagePullBackOff status*
 
 ## 6. HelloWorld xApp Connectivity Test
 - **Status**: PASSED
@@ -80,7 +80,7 @@
 - **Type**: LoadBalancer
 - **Result**: Kong proxy is accessible for external traffic
 
-![Kong Proxy Service](screenshots/6-%20kong-proxy)
+![Kong Proxy Service](screenshots/8-%20namespaces.png)
 *Screenshot showing kubectl get service infrastructure-kong-proxy -n ricinfra*
 
 ## 8. E2Mgr Services Test
@@ -89,7 +89,7 @@
 - **RMR Service**: service-ricplt-e2mgr-rmr (4561/TCP, 3801/TCP)
 - **Result**: E2Mgr services are deployed and configured
 
-![E2Mgr Services](screenshots/1%20-%20services-overview.png)
+![E2Mgr Services](screenshots/2%20-%20kubernetes%20-pods.png)
 *Screenshot showing E2Mgr services in ricplt namespace*
 
 ## 9. E2SIM Container Test
@@ -99,10 +99,10 @@
 - **Status**: Running
 - **Logs**: Generating comprehensive simulation logs
 
-![E2SIM Container Status](screenshots/4%20-%20e2sim-container.png)
+![E2SIM Container Status](screenshots/5-%20s2sim-container.png)
 *Screenshot showing docker ps -a --filter "name=e2sim"*
 
-![E2SIM Logs](screenshots/5-%20s2sim-container.png)
+![E2SIM Logs](screenshots/6-%20kong-proxy.png)
 *Screenshot showing docker logs e2sim-logging-fixed --tail 10*
 
 ## 10. Deployment Summary
@@ -111,8 +111,8 @@
 - **Platform Pods**: 1 (1 with image pull issue)
 - **Total Active Components**: 5/6 (83% success rate)
 
-![Complete Deployment Overview](screenshots/1%20-%20services-overview.png)
-*Screenshot showing kubectl get all --all-namespaces*
+![Complete Deployment Overview](screenshots/9-infrastructure.png)
+*Screenshot showing comprehensive infrastructure status including pods, services, deployments, and nodes*
 
 ## Test Results Analysis
 
