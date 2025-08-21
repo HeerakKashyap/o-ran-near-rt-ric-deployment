@@ -154,9 +154,3 @@ The deployment demonstrates a working O-RAN ecosystem with functional xApp deplo
 3. **O-RAN-Task-Submission.md** - This submission document
 4. **E2SIM Docker files** - Modified Dockerfile and startup script for logging
 5. **E2SIM source code** - Fixed compilation issues in multiple files
-
-## Submission Details
-
-- **GitHub Repository**: [Repository link to be provided]
-- **Submission Email**: srao@linuxfoundation.org
-- **Due Date**: 22nd August 2025, 23:59 Pacific 
