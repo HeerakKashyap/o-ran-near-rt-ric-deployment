@@ -205,15 +205,6 @@ The `screenshots/` directory contains visual evidence of:
 ### System Requirements
 - **OS**: Windows 10/11
 - **Docker**: Desktop with Kubernetes v1.32.2
-- **RAM**: 8GB minimum (16GB recommended)
-- **Storage**: 50GB free space
-- **Network**: Internet access for Docker images
-
-### Software Versions
-- **Kubernetes**: v1.32.2
-- **Docker**: Desktop 4.x
-- **Helm**: v3.x
-- **PowerShell**: 5.1 or higher
 
 ## Troubleshooting
 
@@ -223,13 +214,6 @@ The `screenshots/` directory contains visual evidence of:
 ```powershell
 # This is expected - registry access issue
 kubectl describe pod -n ricplt | findstr e2mgr
-```
-
-#### Port Forwarding Issues
-```powershell
-# Kill existing port forwards
-netstat -ano | findstr :8080
-taskkill /PID <PID> /F
 ```
 
 #### Docker Issues
